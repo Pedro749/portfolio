@@ -1,0 +1,19 @@
+@import "./sass/_mixins_variable.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  background-color: $c-9;
+  color: $c-1;
+  transition: all 0.5s ease-out;
+}
+
+.light {
+  background-color: $c-1;
+  color: $c-10;
+  transition: all 0.5s ease-out;
+}

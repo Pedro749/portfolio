@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Oswald:wght@400;700&display=swap");
+
+$p-1: #eeffbc;
+$p-2: #d9ff9c;
+$p-3: #c7f38d;
+$p-4: #b6e47a;
+$p-5: #84cc63;
+$p-6: #408528;
+$p-7: #2e6b19;
+$p-8: #1c4b0b;
+$p-9: #0d2604;
+$p-10: #071601;
+
+$c-1: #f2f2f2;
+$c-2: #e4e4e4;
+$c-3: #cdcdcd;
+$c-4: #b7b7b7;
+$c-5: #939591;
+$c-6: #6c6c6c;
+$c-7: #474d45;
+$c-8: #2a3227;
+$c-9: #171f15;
+$c-10: #050f02;
+$c-11: #000000;
+
+$g-1: linear-gradient(180deg, #498f30 0%, #315e11 100%);
+$g-2: linear-gradient(180deg, #84cc63 0%, #75992e 100%);
+$g-3: linear-gradient(180deg, #c7f38d 0%, #8cb246 100%);
+
+$font-1: "Oswald", sans-serif;
+$font-2: "Montserrat", sans-serif;
+
+$lg-device: 1200px;
+$md-device: 760px;
+$sm-device: 480px;
+
+@mixin device($size) {
+  @if $size == large {
+    @media screen and (min-width: $lg-device) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media screen and (min-width: $md-device) and (max-width: #{$lg-device - 1}) {
+      @content;
+    }
+  } @else if $size == small {
+    @media screen and (max-width: #{$md-device - 1}) {
+      @content;
+    }
+  }
+}
