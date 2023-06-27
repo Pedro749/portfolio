@@ -1,0 +1,36 @@
+@import "../sass/mixins_variable";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+      padding: 1rem 1.5rem;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: $font-1;
+      font-size: 1.25rem;
+      color: $c-10;
+    }
+  }
+
+  &.dark {
+    ul li a {
+      color: $c-1;
+    }
+
+    .header__contato {
+      color: $c-10;
+    }
+  }
+}

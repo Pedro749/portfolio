@@ -6,14 +6,21 @@
   box-sizing: border-box;
 }
 
+main.dark,
 .dark {
   background-color: $c-9;
   color: $c-1;
   transition: all 0.5s ease-out;
 }
 
+main.light,
 .light {
   background-color: $c-1;
   color: $c-10;
   transition: all 0.5s ease-out;
+}
+
+.container {
+  max-width: $lg-device;
+  margin: 0 auto;
 }

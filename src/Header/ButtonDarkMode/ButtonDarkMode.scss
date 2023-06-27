@@ -1,0 +1,58 @@
+@import "../../sass/_mixins_variable.scss";
+
+.buttonDarkMode {
+  width: 4rem;
+  height: 2rem;
+  background-color: $p-9;
+  border-radius: 1.425rem;
+  border: 2px solid $p-1;
+  display: flex;
+  align-items: center;
+  background-color: $c-1;
+  position: relative;
+  cursor: pointer;
+
+  &.dark {
+    background-color: $p-9;
+  }
+}
+
+.divButton {
+  background-color: $p-6;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid $p-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  &.dark {
+    background-color: $p-6;
+    animation: active-button 0.4s forwards;
+  }
+
+  &.light {
+    background-color: $p-6;
+    animation: desactive-button 0.4s forwards;
+  }
+}
+
+@keyframes active-button {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes desactive-button {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

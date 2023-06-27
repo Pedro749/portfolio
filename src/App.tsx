@@ -6,9 +6,11 @@ import Header from "./Header/Header";
 const App = () => {
   const [theme, setTheme] = React.useState<ThemeContextType>("light");
   return (
-    <ThemeContext.Provider value={theme}>
+    <ThemeContext.Provider value={{ theme: theme, changeTheme: setTheme }}>
       <main className={`${theme}`}>
-        <Header setTheme={setTheme} />
+        <div className={`container ${theme}`}>
+          <Header />
+        </div>
       </main>
     </ThemeContext.Provider>
   );
