@@ -1,7 +1,7 @@
 import React from "react";
-import { ThemeContext } from "../../ThemeContext";
-import Sun from "../../assets/sol.svg";
-import Moon from "../../assets/lua.svg";
+import { ThemeContext } from "../../../ThemeContext";
+import Sun from "../../../assets/sol.svg";
+import Moon from "../../../assets/lua.svg";
 import "./ButtonDarkMode.scss";
 
 const ButtonDarkMode = () => {
@@ -17,12 +17,7 @@ const ButtonDarkMode = () => {
   return (
     <div className={`${theme} buttonDarkMode`} onClick={handleClick}>
       <div className={`${theme} divButton`}>
-        <img
-          src={theme === "dark" ? Moon : Sun}
-          alt="Your SVG"
-          width={18}
-          height={18}
-        />
+        <img src={theme === "dark" ? Moon : Sun} alt="Your SVG" />
       </div>
     </div>
   );

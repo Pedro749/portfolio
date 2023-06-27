@@ -1,8 +1,8 @@
 import React from "react";
-import { ThemeContext } from "../ThemeContext";
-import ButtonDarkMode from "./ButtonDarkMode/ButtonDarkMode";
-import logoLight from "../assets/logoLight.svg";
-import logoDark from "../assets/logoDark.svg";
+import { ThemeContext } from "../../ThemeContext";
+import ButtonDarkMode from "./ButtonDarkMode";
+import logoLight from "../../assets/logoLight.svg";
+import logoDark from "../../assets/logoDark.svg";
 import "./Header.scss";
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
   return (
     <div className={`${theme} header`}>
       <img
+        className={`logo`}
         src={theme === "light" ? logoLight : logoDark}
         alt="LogoPedro Augusto"
       />

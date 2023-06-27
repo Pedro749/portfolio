@@ -1,0 +1,40 @@
+@import "../../sass/mixins_variable";
+
+.home {
+  display: grid;
+  font-family: $font-1;
+  grid-template-columns: 2fr 1fr;
+  color: $c-10;
+
+  div {
+    position: relative;
+
+    img {
+      width: 60rem;
+      position: absolute;
+      top: -28rem;
+      left: -8rem;
+    }
+
+    p {
+      font-family: $font-2;
+      max-width: 80%;
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+
+    h1 {
+      font-size: 3.75rem;
+      line-height: 4.125rem;
+    }
+  }
+
+  &.dark {
+    color: $c-1;
+  }
+}
